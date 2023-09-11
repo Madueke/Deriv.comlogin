@@ -671,32 +671,6 @@
         
         <p id="signup-link" class="account-text">Don’t have an account yet? <a class="account-link" href="https://deriv.com/signup/">Create a new account</a></p>
     </div>
-    <script>
-        var websiteDomain = 'deriv.com';
-        var app_id = '16929';
-        var currentUrl = new URL(location.href);
-        var partnerId = currentUrl.searchParams.get('partnerId');
-        var signup_url = '';
-
-        if (partnerId && /^[\w\-]{1,32}$/.test(partnerId)) {
-            partnerId = encodeURIComponent(partnerId);    
-        } else {
-            partnerId = '';
-        }
-
-        if (app_id == 36218) {
-            if (partnerId) {
-                signup_url = `Don’t have an account yet? <a class='account-link' href='https://deriv.com/ctrader-signup/?app_id=36218&partnerId=` + partnerId + `'>Create a new account</a>`;
-            } else {
-                signup_url = `Don’t have an account yet? <a class='account-link' href='https://deriv.com/ctrader-signup/?app_id=36218'>Create a new account</a>`;
-            }
-        } else {
-            signup_url = `Don’t have an account yet? <a class='account-link' href='https://deriv.com/signup/'>Create a new account</a>`;
-        }
-
-        document.getElementById("signup-link").innerHTML = signup_url;
     
-    </script>
-
 
 </body></html>
